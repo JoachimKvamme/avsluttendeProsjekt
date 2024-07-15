@@ -1,0 +1,25 @@
+Desimalkoordinater for Bergen:
+"breddegrad: 60.3929 Lengdegrad: 5.3241"
+
+Tronhjem:
+Breddegrad: 63.43049 Lengdegrad: 10.39506
+
+URL:
+
+https://api.met.no/weatherapi/subseasonal/1.0/complete?lat=63.4304&lon=10.3950
+
+Kristiansand:
+
+Breddegrad: 58.14671 Lengdegrad: 7.9956
+
+URL:
+
+https://api.met.no/weatherapi/subseasonal/1.0/complete?lat=58.1467&lon=7.9956
+
+Tromsø:
+
+Breddegrad: 69.6489 Lengdegrad: 18.95508
+
+URL:
+
+https://api.met.no/weatherapi/subseasonal/1.0/complete?lat=69.6489&lon=18.9550

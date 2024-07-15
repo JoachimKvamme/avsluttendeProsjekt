@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hovedside</title>
+    <link id="hovedstil" rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body class="body">
+    <header class="header">
+        <h1>Header</h1>
+    </header>
+    <nav class="hoved-nav">
+        <ul class="navliste">
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="om-side.html">Om oss</a></li>
+            <li><a href="api.html">Api</a></li>
+            <li><a href="kort.html">Diverse kort</a></li>
+        </ul>
+        <button class="hamburger">
+            <!-- material icons https://material.io/resources/icons/ -->
+            <i class="menuIcon material-icons">menu</i>
+            <i class="closeIcon material-icons">close</i>
+        </button>
+    </nav>
+    <main class="main">
+        <h2>Været, time for time</h2>
+        <select name="byer" id="byer" oninput="velgSted()" class="nedtrekksmeny">
+            <option value="">Velg et sted</option>
+            <option value="brukerpos">Min posisjon</option>
+            <option value="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.3929&lon=5.3241"> Bergen</option>
+            <option value="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.9127&lon=10.7460">Oslo</option>
+            <option value="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=63.43049&lon=10.39506">Trondhjem</option>
+            <option value="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=69.6489&lon=18.95508">Tromsø</option>
+            <option value="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=58.14671&lon=7.9956">Kristiansand</option>
+        </select><br>
+        <button onclick="visVæret()" class="knapp">Klikk her</button><br>
+        <!--<textarea name="resVær" id="resVær" cols="50" rows="50"></textarea>-->
+        <div id="resVær"></div>
+
+    </main>
+    <aside class="sidefane">Interessant ekstrainformasjon
+        <img src="../bilder/eplefugl.png" alt="eplefugl" class="bilde">
+    </aside>
+    <footer class="footer">
+        <h3>Generell kontaktinformasjon og diverse</h3>
+        <button onclick="darkMode()" class="knapp">Dark-mode</button>
+    </footer>
+    <script src="javaScript.js"></script>
+</body>
+</html>
