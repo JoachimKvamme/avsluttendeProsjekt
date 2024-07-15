@@ -1,6 +1,7 @@
 let brukerUrl ="";
 let brukerpos = ""
 hentPosisjon()
+darkMode()
 
 function velgSted() {
     brukerUrl = document.getElementById("byer").value
@@ -145,16 +146,24 @@ async function hentPosisjon() {
       });
 }
 
-function darkMode() {
-    let element = document.body
-    element.classList.toggle("dark-mode")
-    document.getElementById("hoved-nav").classList.toggle("hoved-nav")
-    document.getElementById("hoved-nav").classList.toggle("hoved-nav-dark")
+function darkModeToggle() {
+    let dark = 1
+
+    localStorage.setItem("darkmode", dark)
 }
 
-async function hentLogo() {
-    
+async function darkMode() {
+    let brukervalg = localStorage.getItem("darkmode")
+
+    let element = document.body
+
+    if (brukervalg == 1) {
+        element.classList.toggle("dark-mode")
+        document.getElementById("hoved-nav").classList.toggle("hoved-nav")
+        document.getElementById("hoved-nav").classList.toggle("hoved-nav-dark")
+    }
 }
+
 
 let menu = document.querySelector(".navliste");
 const menuItems = document.querySelectorAll(".navliste-element");
@@ -180,3 +189,8 @@ function toggleMenu() {
 }
 
 hamburger.addEventListener("click", toggleMenu);
+
+function lagreBrukerinfo() {
+
+
+}

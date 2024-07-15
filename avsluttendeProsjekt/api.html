@@ -38,7 +38,7 @@
             <option value="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=69.6489&lon=18.95508">Tromsø</option>
             <option value="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=58.14671&lon=7.9956">Kristiansand</option>
         </select><br>
-        <button onclick="visVæret()" class="knapp">Klikk her</button><br>
+        <button onclick="visVæret()" onclick="lagreSted()" class="knapp">Klikk her</button><br>
         <!--<textarea name="resVær" id="resVær" cols="50" rows="50"></textarea>-->
         <div id="resVær"></div>
 
@@ -48,7 +48,7 @@
     </aside>
     <footer class="footer">
         <h3>Generell kontaktinformasjon og diverse</h3>
-        <button onclick="darkMode()" class="knapp">Dark-mode</button>
+        <button onclick="darkModeToggle()" class="knapp">Dark-mode</button>
     </footer>
     <script src="javaScript.js"></script>
 </body>
