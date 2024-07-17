@@ -206,7 +206,6 @@ function toggleMenu() {
 
 hamburger.addEventListener("click", toggleMenu);
 
-function lagreBrukerinfo() {
-
-
+function hjem() {
+    window.location.replace("index.html")
 }
