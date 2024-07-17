@@ -243,3 +243,8 @@
     height: 600px;
 }
 
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
