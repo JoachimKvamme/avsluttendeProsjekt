@@ -1,7 +1,7 @@
 let brukerUrl ="";
 let brukerpos = ""
 hentPosisjon()
-darkMode()
+darkModeStart()
 
 function velgSted() {
     brukerUrl = document.getElementById("byer").value
@@ -149,10 +149,16 @@ async function hentPosisjon() {
 function darkModeToggle() {
     let dark = 1
 
-    localStorage.setItem("darkmode", dark)
+    if (localStorage.getItem("darkmode") != 1){
+        localStorage.setItem("darkmode", dark)
+    }
+    else {
+        localStorage.setItem("darkmode", 0)
+    }
+
 }
 
-async function darkMode() {
+async function darkModeStart() {
     let brukervalg = localStorage.getItem("darkmode")
 
     let element = document.body
@@ -164,6 +170,16 @@ async function darkMode() {
     }
 }
 
+function darkmode() {
+
+    let element = document.body
+    element.classList.toggle("dark-mode")
+    document.getElementById("hoved-nav").classList.toggle("hoved-nav")
+    document.getElementById("hoved-nav").classList.toggle("hoved-nav-dark")
+
+}
+document.getElementById("darkmode").addEventListener("click", darkModeToggle)
+document.getElementById("darkmode").addEventListener("click", darkmode)
 
 let menu = document.querySelector(".navliste");
 const menuItems = document.querySelectorAll(".navliste-element");
