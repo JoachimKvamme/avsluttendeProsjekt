@@ -249,3 +249,13 @@
     justify-content: space-between;
     padding: 16px;
 }
+
+.graph-outline {
+    display: grid;
+    grid-template-areas: "pdf";
+    
+}
+
+.pdf-cv {
+    grid-area: "pdf";
+}
