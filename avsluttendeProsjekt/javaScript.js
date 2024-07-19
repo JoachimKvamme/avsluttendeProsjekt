@@ -11,6 +11,7 @@ function velgSted() {
 }
 
 function formatDato(datestring) {
+    // Året brukes ikke aktivt i denne versjonen av funksjonen, men det er tenkelig at man av og til også vil presentere årstallet. Derfor lar jeg den være.
     let aar = datestring.slice(0,4)
     let maaned = datestring.slice(5,7)
     let dag = datestring.slice(8, 10).trim()
