@@ -65,6 +65,9 @@ function formatDato(datestring) {
 
 async function visVæret() {
     try {
+
+        try {document.getElementById("resVærListe").remove()}
+        catch {console.log("Det var ingenting å slette/noe gikk galt.")}
         let liste = document.createElement("ul")
         document.getElementById("resVær").appendChild(liste)
         liste.setAttribute("class", "liste")
@@ -117,7 +120,6 @@ async function visVæret() {
 
     } catch {
         console.log("Noe gikk galt med å vise været")
-        document.getElementById("resVær").innerHTML += "Noe gikk galt med å vise været. Har du husket å velge sted?"
     }
 }
 
